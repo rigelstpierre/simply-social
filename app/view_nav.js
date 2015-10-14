@@ -11,16 +11,23 @@ export default React.createClass({
 
   _handleClickEvent(e) {
     e.preventDefault();
-    $(".nav>li.active").removeClass("selected");
+    this.setState({ 'selected': e.target.getAttribute('data-value') })
   },
 
   render() {
+    var tabs = this.props.data.map(function (item) {
+      var selected = item == this.state.selected ? 'selected' : '';
+      return (
+        <li onClick={ this._handleClickEvent } className={ selected }>
+          <a href="#" data-value={ item }>{ item }</a>
+        </li>
+      );
+    }, this);
+
     return (
      <section className="view-nav">
       <ul className="nav">
-        <li className="selected" onClick={ this._handleClickEvent }><a href="#">All Posts</a></li>
-        <li onClick={ this._handleClickEvent }><a href="#">Photos</a></li>
-        <li onClick={ this._handleClickEvent }><a href="#">Videos</a></li>
+       { tabs }
       </ul>
      </section>
     );

@@ -8,7 +8,7 @@ export default React.createClass({
      <section className="hero">
       <NewMessage />
       <ViewNav
-        selected={ null }
+        selected={ 'All Posts' }
         data={ ['All Posts', 'Photos', 'Video'] }
       />
      </section>
