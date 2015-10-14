@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "./hero";
+import Posts from "./posts";
 
 export default React.createClass({
   render: function() {
@@ -14,6 +15,7 @@ export default React.createClass({
           </div>
         </nav>
         <Hero />
+        <Posts />
       </div>
     );
   },

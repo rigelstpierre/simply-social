@@ -1,0 +1,94 @@
+.posts {
+  margin-top: 50px;
+  .post {
+    padding: 25px 0 25px 0;
+    min-width: 370px;
+    width: 34%;
+    height: 100%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    border: 1px solid #dee1e5;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    position: relative;
+    @include clearfix;
+    &.has-media {
+      padding-bottom: 0;
+    }
+    .avatar {
+      float: left;
+      margin-right: 20px;
+      margin-left: 25px;
+    }
+    .content {
+      float: left;
+      width: 85%;
+    }
+    .meta {
+      position: absolute;
+      right: 20px;
+      top: 0;
+      ul {
+        padding: 0;
+        list-style: none;
+        li {
+          display: inline-block;
+          margin-left: 23px;
+          a {
+            color: #bec3cc;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 18px;
+            background-image: url(../img/icon-sprite.png);
+            background-repeat: no-repeat;
+            height: 16px;
+            width: 15px;
+            display: block;
+            &.reply {
+              background-position: 0 -30px;
+            }
+            &.like {
+              background-position: 0 -47px;
+            }
+          }
+          &:last-child {
+            a { background: none; }
+          }
+        }
+      }
+    }
+    .expand {
+      color: #bec3cc;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+    .media {
+      img {
+        width: 100%;
+      }
+    }
+    h2 {
+      color: #3f454d;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 400;
+      margin: 0;
+    }
+    p {
+      color: #70767f;
+      font-size: 15px;
+      line-height: 24px;
+      margin-top: 10px;
+    }
+    a {
+      color: #bec3cc;
+      font-size: 15px;
+      line-height: 24px;
+      text-decoration: none;
+    }
+  }
+}
