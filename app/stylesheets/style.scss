@@ -1,0 +1,10 @@
+@import 'normalize';
+@import 'fonts/fonts';
+
+@import 'nav';
+@import 'hero';
+
+.container {
+  max-width: 1350px;
+  margin: 0 auto;
+}
