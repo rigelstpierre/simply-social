@@ -1,9 +1,9 @@
 import React from "react";
-import Nav from "./nav";
+import ApplicationWrapper from "./application_wrapper";
 
 require('./stylesheets/style.scss');
 
 React.render(
-  <Nav />,
+  <ApplicationWrapper />,
   document.body
 );

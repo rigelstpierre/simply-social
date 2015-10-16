@@ -1,9 +1,32 @@
+import $ from 'jquery';
 import React from "react";
-import Hero from "./hero";
-import Posts from "./posts";
+import Modal from "./modal";
 
 export default React.createClass({
-  render: function() {
+
+  getInitialState() {
+    return {
+      showModal: false
+    };
+  },
+
+  _handleClickEvent(e) {
+    e.preventDefault();
+    this._toggleModal();
+  },
+
+  _toggleModal() {
+    this.setState({ 'showModal': !this.state.showModal })
+  },
+
+
+  _renderModal() {
+    if (this.state.showModal) {
+      return <Modal toggleModal={ this._toggleModal } />
+    };
+  },
+
+  render() {
     return (
       <div>
         <nav>
@@ -12,10 +35,12 @@ export default React.createClass({
               <img src={ require('./img/logo.png') } />
               <h1>simply<span>social</span></h1>
             </div>
+            <div className="social-controls">
+              <a className="new-message" href="#" onClick={ this._toggleModal }></a>
+            </div>
           </div>
         </nav>
-        <Hero />
-        <Posts />
+        { this._renderModal() }
       </div>
     );
   },
