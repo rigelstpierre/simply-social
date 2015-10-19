@@ -29,6 +29,11 @@ export default React.createClass({
           <h4>Create new message</h4>
           <form>
             <textarea name="message"></textarea>
+             <ul className="add-media-nav">
+              <li className="photo"><a href="#">Add Photo</a></li>
+              <li className="video"><a href="#">Add Video</a></li>
+            </ul>
+            <input type="submit" value="Post" />
           </form>
         </div>
       </div>

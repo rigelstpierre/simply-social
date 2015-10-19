@@ -31,6 +31,36 @@
       border-radius: 3px;
       resize: none;
     }
+    .add-media-nav {
+      margin-top: 25px;
+      margin-left: 0;
+      float: left;
+      li {
+        a {
+          color: #70767f;
+        }
+        &.photo {
+          background-position: 0px -86px;
+        }
+        &.video {
+          background-position: 0px -102px;
+        }
+      }
+    }
+    input[type=submit] {
+      width: 75px;
+      height: 35px;
+      background-color: #00b286;
+      border-radius: 3px;
+      border: none;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      color: #fff;
+      float: right;
+      margin-top: 15px;
+    }
     .close-btn {
       width: 21px;
       height: 21px;
@@ -41,7 +71,6 @@
       position: absolute;
       top: -26px;
       right: -30px;
-
     }
   }
 }

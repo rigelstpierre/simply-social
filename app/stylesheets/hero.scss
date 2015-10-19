@@ -32,35 +32,6 @@
         outline: 0;
       }
     }
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 36px 0 0 30px;
-      opacity: 0.5;
-      li {
-        display: inline-block;
-        margin-right: 45px;
-        height: 16px;
-        background-image: url(../img/icon-sprite.png);
-        background-repeat: no-repeat;
-        &.photo {
-          background-position: 0 2px;
-        }
-        &.video {
-          background-position: 0 -14px;
-        }
-        a {
-          font-family: 'Open Sans', sans-serif;
-          font-weight: 400;
-          font-size: 14px;
-          font-weight: 300;
-          line-height: 18px;
-          color: #fff;
-          text-decoration: none;
-          padding-left: 26px;
-        }
-      }
-    }
   }
   .view-nav {
     position: absolute;
