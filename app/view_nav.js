@@ -15,10 +15,10 @@ export default React.createClass({
   },
 
   render() {
-    var tabs = this.props.data.map(function (item) {
+    var tabs = this.props.data.map(function (item, i) {
       var selected = item == this.state.selected ? 'selected' : '';
       return (
-        <li onClick={ this._handleClickEvent } className={ selected }>
+        <li onClick={ this._handleClickEvent } className={ selected } key={ i }>
           <a href="#" data-value={ item }>{ item }</a>
         </li>
       );
