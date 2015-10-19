@@ -32,6 +32,81 @@ nav {
       width: 31px;
       height: 26px;
       display: block;
+      float: left;
+    }
+    form {
+      float: left;
+      margin: 0 25px;
+      input[type="text"] {
+        width: 200px;
+        height: 25px;
+        border: 1px solid #70767f;
+        border-radius: 4px;
+        background-image: url(../img/icon-sprite.png);
+        background-position: right -121px;
+        position: relative;
+        background-repeat: no-repeat;
+        background-color: transparent;
+      }
+    }
+    .avatar {
+      float: left;
+      position: relative;
+      &:hover {
+        ul {
+          visibility: visible;
+        }
+      }
+      &:before {
+        position: absolute;
+        right: -25px;
+        top: 15px;
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 5px 0 5px;
+        border-color: #4b4f54 transparent transparent transparent;
+      }
+      ul {
+        visibility: hidden;
+        position: absolute;
+        top: 18px;
+        right: -40px;
+        z-index: 4;
+        list-style: none;
+        padding: 0;
+        width: 96px;
+        background-color: #f4f5f7;
+        border-radius: 4px;
+        &:before {
+          position: absolute;
+          right: 15px;
+          top: -5px;
+          content: '';
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 5px 5px 5px;
+          border-color: transparent transparent #f4f5f7 transparent;
+        }
+        li {
+          padding-left: 18px;
+          border-bottom: 1px solid #dee1e5;
+          &:last-child {
+            border: none;
+          }
+          a {
+            color: #70767f;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 30px;
+            text-decoration: none;
+            display: block;
+          }
+        }
+      }
     }
   }
 }

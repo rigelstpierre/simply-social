@@ -37,6 +37,18 @@ export default React.createClass({
             </div>
             <div className="social-controls">
               <a className="new-message" href="#" onClick={ this._toggleModal }></a>
+              <form>
+                <input type="text" value="" />
+              </form>
+              <div className="avatar">
+                <img src={ require('./img/avatars/avatar.png') } />
+                <ul>
+                  <li><a href="#">Profile</a></li>
+                  <li><a href="#">Followers</a></li>
+                  <li><a href="#">Following</a></li>
+                  <li><a href="#">Settings</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </nav>
