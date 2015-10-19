@@ -4,7 +4,6 @@ import Nav from "./nav";
 import Hero from "./hero";
 import Posts from "./posts";
 
-
 export default React.createClass({
 
   render() {
