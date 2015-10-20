@@ -1,5 +1,5 @@
 import React from "react";
-import MediaDiv from './media_div';
+import Post from './post';
 
 export default React.createClass({
 
@@ -37,30 +37,8 @@ export default React.createClass({
     ]
 
     var posts = data.map(function(post, index) {
-      var postClasses = post['mediaPath'] != null ? 'post has-media' : 'post';
-
-      var mediaDiv;
-      if (post['mediaPath'] != null) {
-        mediaDiv = <MediaDiv media={ post['mediaPath'] } />
-      };
-
       return (
-        <div className={ postClasses } key={ index }>
-          <img src={ require('./img/avatars/' + post['avatarName'] + '.png') } className="avatar" />
-          <div className="content">
-            <h2>{ post['author'] }</h2>
-            <p>{ post['content'] }</p>
-            <a href="#" className="expand">Expand</a>
-          </div>
-          <div className="meta">
-            <ul>
-              <li><a href="#" className="reply"></a></li>
-              <li><a href="#" className="like"></a></li>
-              <li><a href="#">{ post['timeSincePosted'] }</a></li>
-            </ul>
-          </div>
-          { mediaDiv }
-        </div>
+        <Post data={ post } key={ index } />
       );
     });
 
