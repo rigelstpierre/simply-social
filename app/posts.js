@@ -11,28 +11,43 @@ export default React.createClass({
         author: 'Sam Soffes',
         content: 'How to Get Inspired: the Right Way - Designmodo <a href="#">bit.ly/1hqgbQA</a> Good stuff from <a href="#">@designmodo</a>!',
         mediaPath: null,
-        timeSincePosted: '3m'
+        timeSincePosted: '3m',
+        comments: [
+          {
+            avatarName: 'jed',
+            author: 'Jed Bridges',
+            content: 'Great way to start the week. Thanks for sharing!',
+          },
+          {
+            avatarName: 'ren',
+            author: 'Ren Walker',
+            content: 'Feeling inspired now... thanks for great article <a href="#">@designmodo</a>'
+          }
+        ]
       },
       {
         avatarName: 'meg',
         author: 'Meg Robichaud',
         content: 'My view this morning is simply beautiful... <a href="#">instagram.com/p/mV0PUrHRwQ/</a>',
         mediaPath: 'meg-image',
-        timeSincePosted: '25m'
+        timeSincePosted: '25m',
+        comments: [],
       },
       {
         avatarName: 'kerem',
         author: 'Kerem Suer',
         content: '8 Apps to Turn Your Pipe Dreams Into Prototypes <a href="#">on.mash.to/1oubyu8</a>',
         mediaPath: null,
-        timeSincePosted: '50m'
+        timeSincePosted: '50m',
+        comments: [],
       },
       {
         avatarName: 'liang',
         author: 'Liang Shi',
         content: 'How to get animations out of your head. <a href="#">bit.ly/1q7BngO</a> <br /> Funny and useful.',
         mediaPath: null,
-        timeSincePosted: '1h'
+        timeSincePosted: '1h',
+        comments: [],
       }
     ]
 

@@ -1,7 +1,7 @@
 .posts {
   margin-top: 50px;
   .post {
-    padding: 25px 0 25px 0;
+    padding: 25px 0 0 0;
     min-width: 370px;
     width: 34%;
     height: 100%;
@@ -25,10 +25,23 @@
       float: left;
       width: 85%;
     }
+    .comments-container {
+      clear: both;
+      .comments {
+        width: 100%;
+        .comment {
+          @include clearfix;
+          padding: 25px 0;
+          background-color: rgba(244, 245, 247, 0.5);
+          border-top: 1px solid #dee1e5;
+          position: relative;
+        }
+      }
+    }
     .meta {
       position: absolute;
       right: 20px;
-      top: 0;
+      top: 10px;
       ul {
         padding: 0;
         list-style: none;
@@ -65,6 +78,7 @@
       font-size: 12px;
       font-weight: 400;
       line-height: 24px;
+      margin-left: 85px;
     }
     .media {
       img {
