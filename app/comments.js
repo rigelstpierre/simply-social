@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import React from "react";
+import classNames from 'classnames'
 
 export default React.createClass({
   getInitialState() {
@@ -48,9 +49,16 @@ export default React.createClass({
     };
     return (
       <div className="comments-container">
-        <a href="#" className="expand" onClick={ this._clickEventHandler }>{ toogleText }</a>
+        <a href="#" className={ classNames('expand', { 'expanded' : this.state.showComments }) } onClick={ this._clickEventHandler }>
+          { toogleText }
+        </a>
         <div className="comments">
           { comments }
+          <div className={ classNames('comment-reply', { 'show' : this.state.showComments }) }>
+            <form >
+              <input name="reply" placeholder="Reply..." />
+            </form>
+          </div>
         </div>
       </div>
     );
