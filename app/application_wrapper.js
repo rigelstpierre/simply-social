@@ -5,13 +5,22 @@ import Hero from "./hero";
 import Posts from "./posts";
 
 export default React.createClass({
+  getInitialState() {
+    return {
+      postView: 'All Posts'
+    };
+  },
+
+  _updatePostView(viewName) {
+    this.setState({ 'postView': viewName })
+  },
 
   render() {
     return (
       <div>
         <Nav />
-        <Hero />
-        <Posts />
+        <Hero filterPosts={ this._updatePostView } />
+        <Posts postView={ this.state.postView } />
       </div>
     );
   },

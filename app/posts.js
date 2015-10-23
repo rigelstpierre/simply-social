@@ -11,6 +11,7 @@ export default React.createClass({
         author: 'Sam Soffes',
         content: 'How to Get Inspired: the Right Way - Designmodo <a href="#">bit.ly/1hqgbQA</a> Good stuff from <a href="#">@designmodo</a>!',
         mediaPath: null,
+        mediaType: null,
         timeSincePosted: '3m',
         comments: [
           {
@@ -30,6 +31,7 @@ export default React.createClass({
         author: 'Meg Robichaud',
         content: 'My view this morning is simply beautiful... <a href="#">instagram.com/p/mV0PUrHRwQ/</a>',
         mediaPath: 'meg-image',
+        mediaType: 'image',
         timeSincePosted: '25m',
         comments: [],
       },
@@ -38,6 +40,7 @@ export default React.createClass({
         author: 'Kerem Suer',
         content: '8 Apps to Turn Your Pipe Dreams Into Prototypes <a href="#">on.mash.to/1oubyu8</a>',
         mediaPath: null,
+        mediaType: null,
         timeSincePosted: '50m',
         comments: [],
       },
@@ -46,16 +49,29 @@ export default React.createClass({
         author: 'Liang Shi',
         content: 'How to get animations out of your head. <a href="#">bit.ly/1q7BngO</a> <br /> Funny and useful.',
         mediaPath: null,
+        mediaType: null,
         timeSincePosted: '1h',
         comments: [],
       }
     ]
 
-    var posts = data.map(function(post, index) {
+    if (this.props.postView === 'All Posts') {
+      var posts = data.map(function(post, index) {
       return (
         <Post data={ post } key={ index } />
       );
     });
+    } else if (this.props.postView === 'Photos') {
+      var posts = data.map(function(post, index) {
+        if (post['mediaType'] === 'image') {
+          return (
+            <Post data={ post } key={ index } />
+          );
+        };
+    });
+    } else {
+
+    };
 
     return posts;
   },

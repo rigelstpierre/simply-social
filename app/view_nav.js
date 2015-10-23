@@ -11,7 +11,9 @@ export default React.createClass({
 
   _handleClickEvent(e) {
     e.preventDefault();
-    this.setState({ 'selected': e.target.getAttribute('data-value') })
+    var dataValue = e.target.getAttribute('data-value');
+    this.setState({ 'selected': dataValue });
+    this.props.filterContent(dataValue);
   },
 
   render() {
