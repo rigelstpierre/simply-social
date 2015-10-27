@@ -10,7 +10,8 @@ export default React.createClass({
   _renderMedia() {
     var mediaDiv;
     if (this.props.data['mediaPath'] != null) {
-      mediaDiv = <MediaDiv media={ this.props.data['mediaPath'] } />
+      mediaDiv = <MediaDiv
+      media={ this.props.data['mediaPath'] } mediaType={ this.props.data['mediaType'] }  />
     };
 
     return mediaDiv;

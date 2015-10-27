@@ -52,6 +52,24 @@ export default React.createClass({
         mediaType: null,
         timeSincePosted: '1h',
         comments: [],
+      },
+      {
+        avatarName: 'vitor',
+        author: 'Vitor Leal',
+        content: 'You have to see this bike. It will make your daily commute a absolute joy ride! <a href="#">vimeo.com/p/mV0PUrHRwQ/</a>',
+        mediaPath: 'vitor-image',
+        mediaType: 'video',
+        timeSincePosted: '1h',
+        comments: [],
+      },
+      {
+        avatarName: 'pallavi',
+        author: 'Pallavi Gupta ',
+        content: 'Need some reading? 11 free ebooks for designers | Creative Bloq <a href="#">bit.ly/1lE5QDM</a> via <a href="#">@netmag</a>',
+        mediaPath: null,
+        mediaType: null,
+        timeSincePosted: '1h',
+        comments: [],
       }
     ]
 
@@ -70,7 +88,11 @@ export default React.createClass({
         };
     });
     } else {
-
+      if (post['mediaType'] === 'video') {
+          return (
+            <Post data={ post } key={ index } />
+          );
+        };
     };
 
     return posts;
@@ -78,7 +100,7 @@ export default React.createClass({
 
   render() {
     return (
-     <section className="posts">
+     <section className="posts block-view">
       { this._renderPosts() }
      </section>
     );
